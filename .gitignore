@@ -1,0 +1,3 @@
+default_django_project/.env
+venv
+venv/
