@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Mofaga</title>
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+    {% block css %}
+        {#        css here#}
+    {% endblock %}
+</head>
+<body>
+<div class="topheader">
+    <img src="{% static 'image/logo.png' %}" alt="logo">
+
+</div>
+<div class="secondnav">
+    <div class="header10">
+        <nav class="navbar navbar-expand-sm ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </nav>
+    </div>
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>

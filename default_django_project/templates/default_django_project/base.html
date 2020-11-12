@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Django Dashboard</title>
+    {% block responsive %}
+        {% include 'base_site/base_css.html' %}
+    {% endblock %}
+    {% block extrastyle %}{% endblock %}
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+{% block header %}
+    {% include 'base_site/header.html' %}
+{% endblock %}
+
+{% block side_navigation %}
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block messages %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block js %}
+    {% include 'base_site/base_js.html' %}
+{% endblock %}
+
+</body>
+</html>
