@@ -1,4 +1,17 @@
 .nav-color{
-    background-color: #153d77;
-    color: inherit;
+    /*background-color: #153d77; !important;*/
+    opacity: 100%;
 }
+
+.navbar-brand{
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*.full-width{*/
+/*    width: 100%;*/
+/*}*/

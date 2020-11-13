@@ -1,51 +1,67 @@
 {#https://bootstrapious.com/p/bootstrap-sidebar#}
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        <div class="sidebar-header">
-            <h3>Bootstrap Sidebar</h3>
-        </div>
 
-        <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
-            <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
+<!-- Sidebar -->
+<nav id="sidebar">
+    {#        <div class="sidebar-header">#}
+    {#            <h3>Bootstrap Sidebar</h3>#}
+    {#        </div>#}
+
+    <ul class="ul-sidebar">
+        <li class="sidebar-header">Main</li>
+        <li class="sidebar-item">
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
+        </li>
+        <ul class="sidebar-dropdown  collapse list-unstyled" id="homeSubmenu">
+                <li class="sidebar-sub-item">
+                    <a href="#">Home 1</a>
+                </li>
+                <li class="sidebar-sub-item">
+                    <a href="#">Home 2</a>
+                </li>
+                <li class="sidebar-sub-item">
+                    <a href="#">Home 3</a>
+                </li>
+            </ul>
+        <li class="sidebar-header">Elements</li>
+        <li class="sidebar-item">
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-home" aria-hidden="true"></i> Table</a>
+        </li>
+        <ul class="sidebar-dropdown list-unstyled collapse" id="pageSubmenu">
+            <li class="sidebar-sub-item">
+                <a href="#">Table 1</a>
             </li>
-            <li>
-                <a href="#">About</a>
+            <li class="sidebar-sub-item">
+                <a href="#">Table 2</a>
             </li>
-            <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
+            <li class="sidebar-sub-item">
+                <a href="#">Table 3</a>
             </li>
         </ul>
 
-    </nav>
-</div>
+        <li class="sidebar-item">
+            <a href="#FormCRUD" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-home" aria-hidden="true"></i> Forms</a>
+        </li>
+        <ul class="sidebar-dropdown list-unstyled collapse" id="FormCRUD">
+            <li class="sidebar-sub-item">
+                <a href="#">Create</a>
+            </li>
+            <li class="sidebar-sub-item">
+                <a href="#">List</a>
+            </li>
+            <li class="sidebar-sub-item">
+                <a href="#">Delete</a>
+            </li>
+        </ul>
+        <li class="sidebar-header">About</li>
+        <li class="sidebar-item">
+            <a href="#">Portfolio</a>
+        </li>
+        <li class="sidebar-item">
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</nav>
+

@@ -1,21 +1,21 @@
-.wrapper {
-    display: flex;
-    width: 100%;
-}
 
 #sidebar {
-    width: 220px;
-    position: fixed;
+    min-width: 220px;
+    max-width: 220px;
+    /*position: fixed;*/
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
-    color: #fff;
+    background: #fff;
+    color: black;
+    /*color: #153d77;*/
     transition: all 0.3s;
+    /*box-shadow: 2px 2px 22px grey;*/
+    box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -220px;
 }
 
 @media (max-width: 768px) {
@@ -24,9 +24,10 @@
        collapsing in on toggle button click with removal of
        the vertical rotation.   */
     #sidebar {
-        margin-left: -250px;
+        margin-left: -220px;
         transform: rotateY(100deg);
     }
+
     #sidebar.active {
         margin-left: 0;
         transform: none;
@@ -48,13 +49,62 @@
     #sidebarCollapse.active span {
         margin: 0 auto;
     }
+
     #sidebarCollapse.active span:first-of-type {
         transform: rotate(45deg) translate(2px, 2px);
     }
+
     #sidebarCollapse.active span:nth-of-type(2) {
         opacity: 0;
     }
+
     #sidebarCollapse.active span:last-of-type {
         transform: rotate(-45deg) translate(1px, -1px);
     }
 }
+
+
+.ul-sidebar {
+    margin-top: 1rem;
+    /*margin-left: -2rem;*/
+    list-style-type: none;
+    padding-inline-start: 0px;
+    color: #6c757d;
+}
+
+.ul-sidebar i{
+    color:#153d77;
+}
+
+.ul-sidebar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.ul-sidebar a:hover{
+    font-weight: bold;
+    color: #153d77;
+}
+
+.sidebar-header {
+    color: #adb5bd;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: .375rem 1.5rem;
+}
+
+.sidebar-dropdown {
+    padding-inline-start: 0px;
+}
+
+.sidebar-item {
+    margin: 0rem .5rem;
+    padding: .65rem .75rem;
+}
+
+.sidebar-sub-item {
+    font-size: 90%;
+    margin: 0rem .5rem;
+    padding: .35rem 1.5rem .35rem 2.75rem
+}
+

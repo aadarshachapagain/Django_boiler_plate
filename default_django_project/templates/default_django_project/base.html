@@ -10,23 +10,29 @@
     {% block extrastyle %}{% endblock %}
     {% block extrahead %}{% endblock %}
 </head>
-<body>
+<body class="primary-background">
+<div class="secondary-background"></div>
 {% block header %}
     {% include 'base_site/header.html' %}
 {% endblock %}
+<div class="wrapper">
+    {% block side_navigation %}
+    {% endblock %}
+    <div id="content">
+        <div class="container-fluid">
+            {% block breadcrumbs %}
+                <br>
+                {% include 'base_site/breadcrumbs.html' %}
+            {% endblock %}
 
-{% block side_navigation %}
-{% endblock %}
+            {% block messages %}
+            {% endblock %}
 
-{% block breadcrumbs %}
-{% endblock %}
-
-{% block messages %}
-{% endblock %}
-
-{% block content %}
-{% endblock %}
-
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
 {% block footer %}
 {% endblock %}
 

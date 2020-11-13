@@ -1,0 +1,14 @@
+.card {
+    box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
+    float: left;
+
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+.card-body {
+    background-color: #fff;
+}

@@ -1,0 +1,13 @@
+.nav-breadcrumb {
+    width: 100%;
+!important;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: .2rem;
+    position: relative;
+    /*box-shadow: 2px 2px 22px grey; !important;*/
+    box-shadow: 0 2px 4px rgba(126, 142, 177, .12);
+    height: 100%;
+!important;
+    background-color: #fff;
+    opacity: 100%; !important;
+}
