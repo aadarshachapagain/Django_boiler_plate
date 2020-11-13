@@ -17,7 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth.views import LoginView
-from django.urls import path
+from django.urls import path, include
 
 from default_django_project import views
 
@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(), name='login'),
     path('dashboard/', views.Dashboard, name='dashboard'),
+    path('responsive-form/', include('responsive_form.urls')),
 ]
 
 # if settings.DEBUG:

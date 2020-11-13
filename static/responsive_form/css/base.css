@@ -14,7 +14,7 @@
     background-color: #153d77;
     width: 100%;
     height: 200px;
-    position: fixed;
+    position: absolute;
 }
 /*a{*/
 /*    text-decoration: none;*/
@@ -24,4 +24,12 @@
     #content{
         position: fixed;
     }
+}
+
+/*.btn-primary{*/
+/*    background-color: #153d77;*/
+/*}*/
+
+.btn-primary :hover{
+    background-color: #153d77;
 }

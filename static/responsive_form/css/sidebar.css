@@ -2,7 +2,7 @@
 #sidebar {
     min-width: 220px;
     max-width: 220px;
-    /*position: fixed;*/
+    position: relative;
     left: 0;
     height: 100vh;
     z-index: 999;
@@ -72,16 +72,16 @@
     color: #6c757d;
 }
 
-.ul-sidebar i{
-    color:#153d77;
+.ul-sidebar i {
+    color: #153d77;
 }
 
-.ul-sidebar a{
+.ul-sidebar a {
     text-decoration: none;
     color: inherit;
 }
 
-.ul-sidebar a:hover{
+.ul-sidebar a:hover {
     font-weight: bold;
     color: #153d77;
 }

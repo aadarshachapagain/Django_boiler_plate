@@ -8,21 +8,7 @@
 
     <ul class="ul-sidebar">
         <li class="sidebar-header">Main</li>
-        <li class="sidebar-item">
-            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fa fa-home" aria-hidden="true"></i> Dashboard</a>
-        </li>
-        <ul class="sidebar-dropdown  collapse list-unstyled" id="homeSubmenu">
-                <li class="sidebar-sub-item">
-                    <a href="#">Home 1</a>
-                </li>
-                <li class="sidebar-sub-item">
-                    <a href="#">Home 2</a>
-                </li>
-                <li class="sidebar-sub-item">
-                    <a href="#">Home 3</a>
-                </li>
-            </ul>
+        <li class="sidebar-item"><a href="{% url 'dashboard' %}"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
         <li class="sidebar-header">Elements</li>
         <li class="sidebar-item">
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -46,7 +32,7 @@
         </li>
         <ul class="sidebar-dropdown list-unstyled collapse" id="FormCRUD">
             <li class="sidebar-sub-item">
-                <a href="#">Create</a>
+                <a href="{% url 'responsive_from:create_from' %}">Create</a>
             </li>
             <li class="sidebar-sub-item">
                 <a href="#">List</a>
