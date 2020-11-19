@@ -5,8 +5,14 @@
 }
 
 #content {
+    position: relative;
     width: 100%;
 }
+
+.main-content{
+    /*position:absolute;*/
+}
+
 .primary-background{
     background-color: #f4f7fc;
 }
@@ -22,7 +28,7 @@
 /*}*/
 @media (max-width: 768px){
     #content{
-        position: fixed;
+        position: absolute;
     }
 }
 

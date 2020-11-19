@@ -35,9 +35,10 @@
 </div>
 {% block footer %}
 {% endblock %}
-
+{% block headerjs %}
+        {% include 'base_site/base_js.html' %}
+{% endblock %}
 {% block js %}
-    {% include 'base_site/base_js.html' %}
 {% endblock %}
 
 </body>

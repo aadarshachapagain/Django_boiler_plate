@@ -1,0 +1,53 @@
+{% extends 'default_django_project/base.html' %}
+{% load static %}
+{% block side_navigation %}
+    {% include 'base_site/side_navigation.html' %}
+{% endblock %}
+{% block content %}
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Feature Multiple Select</h6>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="checkbox" id="selectall">
+                                    <label class="form-check-label" for="Checkbox1">Select All</label>
+                                </div>
+                                <br>
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="checkbox" id="Checkbox1">
+                                    <label class="form-check-label" for="Checkbox1">Option 1</label>
+                                </div>
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="checkbox" id="Checkbox2">
+                                    <label class="form-check-label" for="Checkbox2">Option 2</label>
+                                </div>
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="checkbox" id="Checkbox3">
+                                    <label class="form-check-label" for="Checkbox3">Option 3</label>
+                                </div>
+                                <div class="form-check form-check">
+                                    <input class="form-check-input" type="checkbox" id="Checkbox3" value="option3"
+                                           disabled>
+                                    <label class="form-check-label" for="Checkbox3">Other (disabled)</label>
+                                </div>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone
+                                    else.</small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript" src="{% static 'responsive_form/js/multipleselect.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'default_django_project/base.html' %}
+{% load static %}
+{% block side_navigation %}
+    {% include 'base_site/side_navigation.html' %}
+{% endblock %}
+{% block content %}
+    <div class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        <h6>Feature Multiple Divison</h6>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div>
+                                <div class="input_fields_container">
+                                    <div><input type="text" name="product_name[]">
+                                        <button class="btn btn-sm btn-primary add_more_button">Add More Fields</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <h6>Dynamic Add / Remove</h6>
+                                <div class="multi-field-wrapper">
+                                    <div class="multi-fields">
+                                        <div class="multi-field form-group row">
+                                                <label>Label:</label>
+                                            <div>
+                                                <input class="form-control" type="text" name="indicator" required>
+                                            </div>
+                                            <div>
+                                                <button type="button" class="remove-field btn"><i
+                                                        class="fa fa-times"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button"
+                                                class="add-field custom-button btn btn-primary"><i
+                                                class="fa fa-plus">&nbsp; Add Indicator</i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript"
+            src="{% static 'responsive_form/js/features/multiple_divison/multiple_divison.js' %}"></script>
+    <script type="text/javascript"
+            src="{% static 'responsive_form/js/features/multiple_divison/multiple-field-wrapper.js' %}"></script>
+{% endblock %}

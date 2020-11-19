@@ -12,7 +12,7 @@
         <li class="sidebar-header">Elements</li>
         <li class="sidebar-item">
             <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fa fa-home" aria-hidden="true"></i> Table</a>
+                <i class="fa fa-table" aria-hidden="true"></i> Table</a>
         </li>
         <ul class="sidebar-dropdown list-unstyled collapse" id="pageSubmenu">
             <li class="sidebar-sub-item">
@@ -28,7 +28,7 @@
 
         <li class="sidebar-item">
             <a href="#FormCRUD" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fa fa-home" aria-hidden="true"></i> Forms</a>
+                <i class="fa fa-list" aria-hidden="true"></i> Forms</a>
         </li>
         <ul class="sidebar-dropdown list-unstyled collapse" id="FormCRUD">
             <li class="sidebar-sub-item">
@@ -41,6 +41,23 @@
                 <a href="#">Delete</a>
             </li>
         </ul>
+
+        <li class="sidebar-item">
+            <a href="#Features" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-magic" aria-hidden="true"></i> Features</a>
+        </li>
+        <ul class="sidebar-dropdown list-unstyled collapse" id="Features">
+            <li class="sidebar-sub-item">
+                <a href="{% url 'responsive_from:multiple_select' %}">Multiple Select</a>
+            </li>
+            <li class="sidebar-sub-item">
+                <a href="{% url 'responsive_from:multiple_divison' %}">Multiple Divison</a>
+            </li>
+            <li class="sidebar-sub-item">
+                <a href="#">Delete</a>
+            </li>
+        </ul>
+
         <li class="sidebar-header">About</li>
         <li class="sidebar-item">
             <a href="#">Portfolio</a>
