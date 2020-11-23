@@ -26,8 +26,10 @@ urlpatterns = [
     path('login/', LoginView.as_view(), name='login'),
     path('dashboard/', views.Dashboard, name='dashboard'),
     path('responsive-form/', include('responsive_form.urls')),
+    path('image_handler/', include('image_handler.urls')),
+    path('features/', include('features.urls')),
 ]
 
-# if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

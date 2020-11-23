@@ -11,3 +11,11 @@ $('.multi-field-wrapper').each(function () {
             $(this).parent().parent('.multi-field').remove();
     });
 });
+
+$(document).ready(function () {
+    var $wrapper = $('.multi-fields', this);
+    $('.multi-field .remove-field', $wrapper).click(function () {
+        if ($('.multi-field', $wrapper).length < 1)
+            $('.remove-field').hide();
+    });
+});

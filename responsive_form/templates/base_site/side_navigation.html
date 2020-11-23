@@ -48,13 +48,16 @@
         </li>
         <ul class="sidebar-dropdown list-unstyled collapse" id="Features">
             <li class="sidebar-sub-item">
-                <a href="{% url 'responsive_from:multiple_select' %}">Multiple Select</a>
+                <a href="{% url 'features:multiple_select' %}">Multiple Select</a>
             </li>
             <li class="sidebar-sub-item">
-                <a href="{% url 'responsive_from:multiple_divison' %}">Multiple Divison</a>
+                <a href="{% url 'features:multiple_divison' %}">Multiple Divison</a>
             </li>
             <li class="sidebar-sub-item">
-                <a href="#">Delete</a>
+                <a href="{% url 'image_handler:image_crop' %}">Image Crop</a>
+            </li>
+            <li class="sidebar-sub-item">
+                <a href="{% url 'image_handler:image_drag_and_drop' %}">Image Drag And Drop</a>
             </li>
         </ul>
 

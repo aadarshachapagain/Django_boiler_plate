@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'responsive_form',
+    'image_handler',
+    'features',
 ]
 
 MIDDLEWARE = [
