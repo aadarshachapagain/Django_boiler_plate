@@ -1,44 +1,40 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Mofaga</title>
-
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
-    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
-
-    {% block css %}
-        {#        css here#}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Django Dashboard</title>
+    {% block responsive %}
+        {% include 'base_site/base_css.html' %}
     {% endblock %}
+    {% block extrastyle %}{% endblock %}
+    {% block extrahead %}{% endblock %}
 </head>
-<body>
-<div class="topheader">
-    <img src="{% static 'image/logo.png' %}" alt="logo">
+<body class="primary-background">
+<div class="secondary-background"></div>
+{% block header %}
+{#    {% include 'base_site/header.html' %}#}
+{% endblock %}
+<div class="wrapper">
+    {% block side_navigation %}
+    {% endblock %}
+    <div id="content">
+        <div class="container-fluid">
+            {% block messages %}
+            {% endblock %}
 
-</div>
-<div class="secondnav">
-    <div class="header10">
-        <nav class="navbar navbar-expand-sm ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-        </nav>
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
 </div>
-
-{% block content %}
+{% block footer %}
 {% endblock %}
-
+{% block headerjs %}
+        {% include 'base_site/base_js.html' %}
+{% endblock %}
+{% block js %}
+{% endblock %}
 
 </body>
 </html>

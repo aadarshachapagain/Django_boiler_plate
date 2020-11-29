@@ -74,6 +74,7 @@
 
 .ul-sidebar i {
     color: #153d77;
+    /*color: #007718;*/
 }
 
 .ul-sidebar a {
@@ -84,6 +85,7 @@
 .ul-sidebar a:hover {
     font-weight: bold;
     color: #153d77;
+    /*color: #007718;*/
 }
 
 .sidebar-header {

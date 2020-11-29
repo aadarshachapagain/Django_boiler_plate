@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css"
           integrity="sha512-3g+prZHHfmnvE1HBLwUnVuunaPOob7dpksI7/v6UnF/rnKGwHf/GdEq9K7iEN7qTtW+S0iivTcGpeTBqqB04wA=="
           crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static 'features/css/image_drag_and_drop/image_drag_and_drop.css' %}">
 {% endblock %}
 {% block side_navigation %}
     {% include 'base_site/side_navigation.html' %}
@@ -26,8 +27,11 @@
                                     <input name="file" type="file" multiple/>
                                 </div>
                             </form>
+                            <br>
                             <input type="submit" id="submit-all" value="Upload" class="custom-button"
                                    style="float: right">
+
+
                         </div>
                     </div>
                 </div>
@@ -42,54 +46,6 @@
             integrity="sha512-9WciDs0XP20sojTJ9E7mChDXy6pcO0qHpwbEJID1YVavz2H6QBz5eLoDD8lseZOb2yGT8xDNIV7HIe1ZbuiDWg=="
             crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-    final_url = "http://127.0.0.1:8000/image_handler/image_drag_and_drop/upload/";
-    Dropzone.options.dropZoneForm = {
-        url: final_url,
-        addRemoveLinks: true,
-        method: "POST",
-        params: 'file_upload',
-        maxFilesize: 256 * 4 * 2,
-        dictFileTooBig: "File is too big.",
-        autoProcessQueue: false,
-        acceptedFiles: '.png, .jpg,.gif,.bmp,.jpeg',
-        uploadMultiple: true,
-        dictDefaultMessage: "Drag and Drop files here to upload",
-        parallelUploads: 10,
-        maxFiles: 12,
-        clickable: true,
-        headers: {
-            'Access-Control-Request-Headers':'authorization,cache-control,x-requested-with',
-            'Access-Control-Allow-Origin':'*'
-            // remove Cache-Control and X-Requested-With
-            // to be sent along with the request
-        },
-        init: function () {
-            mydropzone = this;
-
-            $("#submit-all").click(function (evt) {
-                evt.preventDefault();
-                evt.stopPropagation();
-                var paymentNotes = $("#paymentNotes").val();
-                mydropzone.autoProcessQueue = true;
-                mydropzone.processQueue();
-
-            });
-            mydropzone.on('sending', function (file, xhr, formData) {
-
-                var notes = $("#paymentNotes").val();
-                var outgoingManualPaymentID = $("#outgoingManualPaymentID").val();
-                console.log('notes from sending' + notes);
-                console.log('notes from sending' + notes);
-                formData.append('paymentNotes', notes);
-                formData.append('outgoingManualPaymentID', outgoingManualPaymentID);
-            });
-        },
-        success: function f(response) {
-            console.log('response' + response);
-            $('.dz-remove').hide();
-        },
-    };
-
-</script>
+    <script type="text/javascript"
+            src="{% static '/features/js/image_drag_and_drop/image_drag_and_drop.js' %}"></script>
 {% endblock %}
