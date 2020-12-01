@@ -13,4 +13,16 @@ def photo_list(request):
             return redirect('image_handler:image_crop')
     else:
         form = PhotoForm()
-    return render(request, 'image_crop/image_crop.html', {'form': form, 'photos': photos})
+
+    data_breadcrumb = {
+        'name': 'Crop Image',
+        'active': 'active'
+    }
+
+    context = {
+        'form': form,
+        'photos': photos,
+        'data_breadcrumb': data_breadcrumb
+    }
+
+    return render(request, 'image_crop/image_crop.html', context)

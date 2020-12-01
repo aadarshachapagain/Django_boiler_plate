@@ -14,6 +14,9 @@
 {% block side_navigation %}
     {% include 'base_site/side_navigation.html' %}
 {% endblock %}
+{% block breadcrumbs %}
+    {% include 'base_site/breadcrumbs.html' with data=data_breadcrumb %}
+{% endblock %}
 {% block content %}
     <div class="main-content">
         <div class="container">
@@ -27,18 +30,18 @@
                         <!-- FORM TO UPLOAD THE IMAGES -->
                         <form method="post" enctype="multipart/form-data" id="formUpload">
                             {% csrf_token %}
-{#                                                        <div class="form-group">#}
-{#                                                            <label>Select Image: </label>#}
-{#                                                            #}
-{#                                                            {{ form.x }}#}
-{#                                                            {{ form.y }}#}
-{#                                                            {{ form.width }}#}
-{#                                                            {{ form.height }}#}
-{#                                                            {{ form.file }}#}
-{#                                                            {{ form.label }}<br>#}
-{#                                                            {{ form.help_text }}#}
-{#                                                            <small class="form-text text-muted">Help text written here</small>#}
-{#                                                        </div>#}
+                            {#                                                        <div class="form-group">#}
+                            {#                                                            <label>Select Image: </label>#}
+                            {#                                                            #}
+                            {#                                                            {{ form.x }}#}
+                            {#                                                            {{ form.y }}#}
+                            {#                                                            {{ form.width }}#}
+                            {#                                                            {{ form.height }}#}
+                            {#                                                            {{ form.file }}#}
+                            {#                                                            {{ form.label }}<br>#}
+                            {#                                                            {{ form.help_text }}#}
+                            {#                                                            <small class="form-text text-muted">Help text written here</small>#}
+                            {#                                                        </div>#}
                             <div class="form-group">
                                 <label for="id_file">Example file input</label>
                                 <input type="hidden" id="id_x" name="x">

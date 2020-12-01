@@ -1,8 +1,25 @@
 from django.shortcuts import render
 
+
 def MultipleSelect(request):
-    return render(request, 'features/multiple_select/multipleselect.html')
+    data_breadcrumb = {
+        'name': 'Multiple Select',
+        'active': 'active'
+    }
+
+    context = {
+        'data_breadcrumb': data_breadcrumb
+    }
+    return render(request, 'features/multiple_select/multipleselect.html', context)
 
 
 def MultipleDivison(request):
-    return render(request, 'features/multiple_division/multipledivison.html')
+    data_breadcrumb = {
+        'name': 'Multiple Division',
+        'active': 'active'
+    }
+
+    context = {
+        'data_breadcrumb': data_breadcrumb
+    }
+    return render(request, 'features/multiple_division/multipledivison.html', context)

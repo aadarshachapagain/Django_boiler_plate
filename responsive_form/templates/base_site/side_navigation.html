@@ -5,69 +5,77 @@
     {#        <div class="sidebar-header">#}
     {#            <h3>Bootstrap Sidebar</h3>#}
     {#        </div>#}
-
     <ul class="ul-sidebar">
         <li class="sidebar-header">Main</li>
-        <li class="sidebar-item"><a href="{% url 'dashboard' %}"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="{% url 'dashboard' %}"><i class="fa fa-home"
+                                                                                         aria-hidden="true"></i>
+            Dashboard</a>
+        </li>
         <li class="sidebar-header">Elements</li>
         <li class="sidebar-item">
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle sidebar-link item">
                 <i class="fa fa-table" aria-hidden="true"></i> Table</a>
+
+            <ul class="sidebar-dropdown list-unstyled collapse" id="pageSubmenu">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#">Table 1</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#">Table 2</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#">Table 3</a>
+                </li>
+            </ul>
         </li>
-        <ul class="sidebar-dropdown list-unstyled collapse" id="pageSubmenu">
-            <li class="sidebar-sub-item">
-                <a href="#">Table 1</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="#">Table 2</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="#">Table 3</a>
-            </li>
-        </ul>
 
         <li class="sidebar-item">
-            <a href="#FormCRUD" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <a href="#FormCRUD" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle sidebar-link item">
                 <i class="fa fa-list" aria-hidden="true"></i> Forms</a>
+
+            <ul class="sidebar-dropdown list-unstyled collapse" id="FormCRUD">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'responsive_from:create_from' %}">Create</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#">Update</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="#">List</a>
+                </li>
+            </ul>
         </li>
-        <ul class="sidebar-dropdown list-unstyled collapse" id="FormCRUD">
-            <li class="sidebar-sub-item">
-                <a href="{% url 'responsive_from:create_from' %}">Create</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="#">List</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="#">Delete</a>
-            </li>
-        </ul>
 
         <li class="sidebar-item">
-            <a href="#Features" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <a href="#Features" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle sidebar-link item">
                 <i class="fa fa-magic" aria-hidden="true"></i> Features</a>
+
+            <ul class="sidebar-dropdown list-unstyled collapse" id="Features">
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'features:multiple_select' %}">Multiple Select</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'features:multiple_divison' %}">Multiple Divison</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'image_handler:image_crop' %}">Image Crop</a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="{% url 'image_handler:image_drag_and_drop' %}">Image Drag And Drop</a>
+                </li>
+            </ul>
         </li>
-        <ul class="sidebar-dropdown list-unstyled collapse" id="Features">
-            <li class="sidebar-sub-item">
-                <a href="{% url 'features:multiple_select' %}">Multiple Select</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="{% url 'features:multiple_divison' %}">Multiple Divison</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="{% url 'image_handler:image_crop' %}">Image Crop</a>
-            </li>
-            <li class="sidebar-sub-item">
-                <a href="{% url 'image_handler:image_drag_and_drop' %}">Image Drag And Drop</a>
-            </li>
-        </ul>
 
         <li class="sidebar-header">About</li>
         <li class="sidebar-item">
-            <a href="#">Portfolio</a>
+            <a class="sidebar-link" href="#">Portfolio</a>
         </li>
         <li class="sidebar-item">
-            <a href="#">Contact</a>
+            <a class="sidebar-link" href="#">Contact</a>
         </li>
     </ul>
+
 </nav>
+{% block extrajs %}
+{% endblock %}
 

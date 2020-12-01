@@ -4,7 +4,14 @@ from django.shortcuts import render
 
 
 def DragAndDropImage(request):
-    return render(request, 'image_drag_and_drop/image_drag_and_drop.html')
+    data_breadcrumb = {
+        'name': 'Drag and Drop image',
+        'active': 'active'
+    }
+    context = {
+        'data_breadcrumb': data_breadcrumb
+    }
+    return render(request, 'image_drag_and_drop/image_drag_and_drop.html', context)
 
 
 def dropzoneuploads(request):

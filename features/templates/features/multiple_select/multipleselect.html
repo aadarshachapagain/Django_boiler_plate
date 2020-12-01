@@ -3,6 +3,9 @@
 {% block side_navigation %}
     {% include 'base_site/side_navigation.html' %}
 {% endblock %}
+{% block breadcrumbs %}
+    {% include 'base_site/breadcrumbs.html' with data=data_breadcrumb %}
+{% endblock %}
 {% block content %}
     <div class="main-content">
         <div class="container">
@@ -51,14 +54,22 @@
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="form-check">
-                                <input type="checkbox" id="select_all"/> <label class="form-check-label"> Select All</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Apple</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Banana</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Grapes</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Papaya</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Watermelon</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Pineapple</label><br>
-                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label class="form-check-label"> Oragne</label><br>
+                                <input type="checkbox" id="select_all"/> <label class="form-check-label"> Select
+                                All</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Apple</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Banana</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Grapes</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Papaya</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Watermelon</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Pineapple</label><br>
+                                <input class="checkbox form-check-input" type="checkbox" name="check[]"> <label
+                                    class="form-check-label"> Oragne</label><br>
                             </div>
 
                         </form>

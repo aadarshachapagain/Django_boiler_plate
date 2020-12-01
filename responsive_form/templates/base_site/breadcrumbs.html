@@ -1,9 +1,11 @@
 {#<nav aria-label="breadcrumb">#}
+<br>
 <div class="breadcrumb-div nav-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
+        <li class="breadcrumb-item "><a href="{% url 'dashboard' %}">Home</a></li>
+{#        <li class="breadcrumb-item "><a href="{% url 'dashboard' %}">Home</a></li>#}
+        {#        <li class="breadcrumb-item active" aria-current="page">Data</li>#}
+        <li class="breadcrumb-item {{ data.active }}" aria-current="page">{{ data.name }}</li>
     </ol>
 </div>
 {#</nav>#}

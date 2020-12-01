@@ -3,8 +3,12 @@
 {% block extrastyle %}
     <link rel="stylesheet" href="{% static 'features/css/multiple_divison/multiple_divison.css' %}">
 {% endblock %}
+
 {% block side_navigation %}
     {% include 'base_site/side_navigation.html' %}
+{% endblock %}
+{% block breadcrumbs %}
+    {% include 'base_site/breadcrumbs.html' with data=data_breadcrumb %}
 {% endblock %}
 {% block content %}
     <div class="main-content">
